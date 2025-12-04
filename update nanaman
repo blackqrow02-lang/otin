@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // LOGIN
+        System.out.println("Welcome to CampusWallet!");
+        System.out.print("Enter MSU-IIT Email: ");
+        String email = sc.nextLine();
+
+        boolean validEmail = email.endsWith("@g.msuiit.edu.ph");
+        if (!validEmail) {
+            System.out.println("Login failed! Only MSU-IIT emails allowed.");
+            return;
+        }
+        while (true) {
+            Scanner input = new Scanner(System.in);
+            {
+
+                System.out.println("\n====== CAMPUSWALLET DASHBOARD ======");
+                System.out.println("[1] View Income Opportunities");
+                System.out.println("[2] Student Marketplace");
+                System.out.println("[3] Budget Helper");
+                System.out.println("[4] Exit");
+                System.out.print("Choose an option: ");
+                String response = input.nextLine();
+                if (response.equals("1")) System.out.println("View Income Opportunities: ");
+                Scanner input2 = new Scanner(System.in);
+                response = input2.nextLine();
+                if (response.equals("Yes")) {
+                    Scanner input3 = new Scanner(System.in);
+                    System.out.println("JOBS AVAILABLE: ");
+                    System.out.println("1. Campus Library Assistant - ₱80/hr");
+                    System.out.println("2. Canteen Helper - ₱70/hr");
+                    System.out.println("3. Poster Designer - ₱300/project");
+                    System.out.println("Choose a job:");
+                    response = input3.nextLine();
+                    if (response.equals("1")) {
+                        System.out.println("Accept Campus Library Assistant Job?");
+                    } else if (response.equals("2")) {
+                        System.out.println("Accept Canteen Helper Job?");
+                    } else if (response.equals("3")) {
+                        System.out.println("Accept Poster Designer Job?");
+                    }
+                    Scanner input4 = new Scanner(System.in);
+                    response = input4.nextLine();
+                    if (response.equals("Yes")) {
+                        System.out.println("Job Accepted!!");
+                    }
+
+                }
+            }
+        }
+    }
+}
