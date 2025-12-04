@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String response = "";
+
+        while (true) {
+            System.out.println("Find Student Job: ");
+            System.out.print("Proceed? ");
+            response = input.nextLine();
+            if (response.equals("Yes")) {
+
+            } else if (response.equals("No")) {
+                System.out.print("System Quitting");
+                break;
+            }
+
+            Scanner input2 = new Scanner(System.in);
+            System.out.println("JOBS AVAILABLE: ");
+            System.out.println("1. Campus Library Assistant - ₱80/hr");
+            System.out.println("2. Canteen Helper - ₱70/hr");
+            System.out.println("3. Poster Designer - ₱300/project");
+            System.out.println("Choose a job:");
+            response = input2.nextLine();
+            if (response.equals("1")) {
+                System.out.println("Accept Campus Library Assistant Job?");
+            } else if (response.equals("2")) {
+                System.out.println("Accept Canteen Helper Job?");
+            } else if (response.equals("3")) {
+                System.out.println("Accept Poster Designer Job?");
+            }
+            Scanner input3 = new Scanner(System.in);
+            response = input3.nextLine();
+            if (response.equals("Yes")) {
+                System.out.println("Job Accepted!!");
+            }
+
+        }
+    }
+
+}
+
